@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "QuickSlot",
+  "version": "1.0",
+  "description": "Streamline meeting scheduling for SDRs by finding available time slots across multiple calendars",
+  "permissions": [
+    "identity",
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.googleapis.com/*"
+  ],
+  "oauth2": {
+    "client_id": "801787498788-hr0rn9kbq1t4cfa91ui348enifr59lod.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar.readonly",
+      "https://www.googleapis.com/auth/userinfo.email"
+    ]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "QuickSlot - Find Available Meeting Times"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
